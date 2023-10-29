@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: #343838;
+    --primary: #005f6b;
+    --secondary: #008c9e;
+    --terteary: #00b4cc;
+    --cuarteary: #00dffc;
+  }
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--background);
+    background-color: #43bae0;
+}
+
+/*---------------------------HEADER y MENU HAMBURGESA------------------------------------------*/
+
+
+.header {
+    height: 80px;
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background:var(--terteary);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 8px var(--terteary);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+.navbar-link a{
+    text-decoration: none;
+    color: var(--background);
+    font-weight: 300;
+}
+
+@media(max-width: 576px){
+    .navbar ul {
+        background-color: var(--cuarteary);
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .navbar i{
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .navbar-list{
+        display: flex;
+    }
+}
+
+
+
+
+
+/*---------------------------PRESENTATION------------------------------------------*/
+#Presentation h1 {
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 6vw;
+    color:white;
+    margin: 0px;
+    text-shadow: 2px 2px var(--background);
+
+  }
+  
+  .service-presentation p {
+    color:white;
+    margin: 0px;
+    text-shadow: 2px 2px var(--background);
+    font-size: 2.5vw;
+  }
+  
+  .service-presentation img {
+   height: auto;
+   width: 100%;
+   object-fit: cover;
+   
+    
+  }
+  
+  .service-presentation {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 100%;
+  }
+
+  .service-text{
+    color:white;
+    margin: 0px;
+    text-shadow: 2px 2px var(--background);
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  /*---------------------------CARDS ESTILOS------------------------------------------*/
+
+  #Cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .Service-Card {
+    border: 2px solid var(--background);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5%;
+    background-color: var(--cuarteary);
+  
+  }
+
+  .SubCard h3{
+    text-align: center;
+    list-style: none;
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 2px 2px #343838;
+
+  }
+  .SubCard ul{
+    text-align: center;
+    list-style: none;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: var(--background);
+  }
+.Card-img{
+    border-radius: 5%;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid;
+    border-image: 36 / 2px / 3px stretch;
+}
+
+.price{
+    font-size: 30px;
+    margin: 10px;
+    color: var(--background);
+}
+
+.button-Price button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.3em;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/*------------------------------------ESTILO DE CONTACTOS-------------------------------*/
+
+
+#Contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+  }
+  
+
+ .contact-text{
+    text-align: center;
+    list-style: none;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 2px 2px #343838;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .Card {
+    flex: auto;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid;
+    color: var(--background);
+    border-radius: 5%;
+    background-color: var(--cuarteary);
+  }
+  
+  .Card label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  .Card input {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .Card button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.3em;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  .Map img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 5%;
+  }
+  .formulario{
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /*------------------ FOOTER-------------------*/
+
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 65px;
+    padding: 0px 30px;
+  
+    background: linear-gradient(0deg, #005f6b 0%, #00b4cc 100%);
+    font-weight: 600;
+    text-align: center;
+    list-style: none;
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px #343838;
+  }
